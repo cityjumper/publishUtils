@@ -1,5 +1,7 @@
 function out = makeTableChart(mytable)
 % Receives mytable which is of the table format
+% Copyright 2014 The MathWorks, Inc.
+% Gareth Thomas
 aux_rand = floor(rand(1)*100);
 s = {};
 s{end+1} = sprintf('<html><head><script type=''text/javascript'' src=''https://www.google.com/jsapi''></script><script type=''text/javascript''>google.load(''visualization'', ''1'', {packages:[''table'']});google.setOnLoadCallback(drawTable);function drawTable() ');
