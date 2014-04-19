@@ -65,7 +65,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>MATLAB Publish Utilities</h1><!--introduction--><p>This file when published in MATLAB will illustrate new dynamic elements for HTML. Please note this only applies for HTML publishing.</p><!--/introduction--><head><script type='text/javascript' src='https://www.google.com/jsapi'></script><script type='text/javascript'>google.load('visualization', '1', {packages:['table']});google.setOnLoadCallback(drawTable);function drawTable() {var data = new google.visualization.DataTable();data.addColumn('string', 'myyear');data.addColumn('number', 'values');data.addRows([['2011',{v: 1, f: '1 '},],['2012',{v: 1, f: '1 '},],['2013',{v: 0, f: '0 '},],['2014',{v: 1, f: '1 '},],]);var table = new google.visualization.Table(document.getElementById('table_div63'));table.draw(data, {showRowNumber: false});}</script></head><body><div id='table_div63'></div><br></body><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>MATLAB Publish Utilities</h1><!--introduction--><p>This file when published in MATLAB will illustrate new dynamic elements for HTML. Please note this only applies for HTML publishing.</p><!--/introduction--><pre class="codeinput">myyear = {<span class="string">'2011'</span>;<span class="string">'2012'</span>;<span class="string">'2013'</span>;<span class="string">'2014'</span>};
+values = [12;122;1231;1213.1];
+morevalues= [true;false;true;false];
+mytable = table(myyear,values,morevalues);
+
+disp(makeTableChart(mytable));
+mytable.Properties.VariableNames{1} = <span class="string">'Year'</span>;
+mytable.Properties.VariableNames{2} = <span class="string">'Values'</span>;
+mytable.Properties.VariableNames{3} = <span class="string">'MoreValues'</span>;
+</pre><head><script type='text/javascript' src='https://www.google.com/jsapi'></script><script type='text/javascript'>google.load('visualization', '1', {packages:['table']});google.setOnLoadCallback(drawTable);function drawTable() {var data = new google.visualization.DataTable();data.addColumn('string', 'myyear');data.addColumn('number', 'values');data.addColumn('boolean', 'morevalues');data.addRows([['2011',{v: 12, f: '12 '},true,],['2012',{v: 122, f: '122 '},false,],['2013',{v: 1231, f: '1231 '},true,],['2014',{v: 1213, f: '1213 '},false,],]);var table = new google.visualization.Table(document.getElementById('table_div14'));table.draw(data, {showRowNumber: false});}</script></head><body><div id='table_div14'></div><br></body><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% MATLAB Publish Utilities
 % This file when published in MATLAB will illustrate new dynamic elements
@@ -73,9 +82,13 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %%
 
 myyear = {'2011';'2012';'2013';'2014'};
-values = rand(4,1);
-mytable = table(myyear,values);
+values = [12;122;1231;1213.1];
+morevalues= [true;false;true;false];
+mytable = table(myyear,values,morevalues);
 
 disp(makeTableChart(mytable));
+mytable.Properties.VariableNames{1} = 'Year';
+mytable.Properties.VariableNames{2} = 'Values';
+mytable.Properties.VariableNames{3} = 'MoreValues';
 ##### SOURCE END #####
 --></body></html>

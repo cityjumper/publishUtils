@@ -4,7 +4,11 @@
 %%
 
 myyear = {'2011';'2012';'2013';'2014'};
-values = rand(4,1);
-mytable = table(myyear,values);
+values = [12;122;1231;1213];
+morevalues= [true;false;true;false];
+mytable = table(myyear,values,morevalues);
 
 disp(makeTableChart(mytable));
+mytable.Properties.VariableNames{1} = 'Year';
+mytable.Properties.VariableNames{2} = 'Values';
+mytable.Properties.VariableNames{3} = 'MoreValues';
