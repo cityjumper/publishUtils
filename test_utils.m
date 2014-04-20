@@ -6,7 +6,7 @@
 %%
 
 myyear = {'2011';'2012';'2013';'2014'};
-values = [12;122;1231;1213];
+values = [12;122.44;1231;1213];
 morevalues= [true;false;true;false];
 mytable = table(myyear,values,morevalues);
 

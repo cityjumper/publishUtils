@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code. Gareth Rules
 To make changes, update the MATLAB code and republish this document.
-      --><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>MATLAB Publish Utilities</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-19"><meta name="DC.source" content="test_utils.m"><style type="text/css">
+      --><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>MATLAB Publish Utilities</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-20"><meta name="DC.source" content="test_utils.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,8 +65,9 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>MATLAB Publish Utilities</h1><!--introduction--><p>This file when published in MATLAB will illustrate new dynamic elements for HTML. Please note this only applies for HTML publishing.</p><!--/introduction--><pre class="codeinput">myyear = {<span class="string">'2011'</span>;<span class="string">'2012'</span>;<span class="string">'2013'</span>;<span class="string">'2014'</span>};
-values = [12;122;1231;1213.1];
+  </style></head><body><div class="content"><h1>MATLAB Publish Utilities</h1><p>This file when published in MATLAB will illustrate new dynamic elements for HTML. Please note this only applies for HTML publishing.</p><pre class="codeinput"><span class="comment">% Gareth Thomas</span>
+</pre><pre class="codeinput">myyear = {<span class="string">'2011'</span>;<span class="string">'2012'</span>;<span class="string">'2013'</span>;<span class="string">'2014'</span>};
+values = [12;122.44;1231;1213];
 morevalues= [true;false;true;false];
 mytable = table(myyear,values,morevalues);
 
@@ -74,15 +75,17 @@ disp(makeTableChart(mytable));
 mytable.Properties.VariableNames{1} = <span class="string">'Year'</span>;
 mytable.Properties.VariableNames{2} = <span class="string">'Values'</span>;
 mytable.Properties.VariableNames{3} = <span class="string">'MoreValues'</span>;
-</pre><head><script type='text/javascript' src='https://www.google.com/jsapi'></script><script type='text/javascript'>google.load('visualization', '1', {packages:['table']});google.setOnLoadCallback(drawTable);function drawTable() {var data = new google.visualization.DataTable();data.addColumn('string', 'myyear');data.addColumn('number', 'values');data.addColumn('boolean', 'morevalues');data.addRows([['2011',{v: 12, f: '12 '},true,],['2012',{v: 122, f: '122 '},false,],['2013',{v: 1231, f: '1231 '},true,],['2014',{v: 1213, f: '1213 '},false,],]);var table = new google.visualization.Table(document.getElementById('table_div14'));table.draw(data, {showRowNumber: false});}</script></head><body><div id='table_div14'></div><br></body><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+</pre><head><script type='text/javascript' src='https://www.google.com/jsapi'></script><script type='text/javascript'>google.load('visualization', '1', {packages:['table']});google.setOnLoadCallback(drawTable);function drawTable() {var data = new google.visualization.DataTable();data.addColumn('string', 'myyear');data.addColumn('number', 'values');data.addColumn('boolean', 'morevalues');data.addRows([['2011',{v: 12.00, f: '12.00 '},true,],['2012',{v: 122.44, f: '122.44 '},false,],['2013',{v: 1231.00, f: '1231.00 '},true,],['2014',{v: 1213.00, f: '1213.00 '},false,],]);var table = new google.visualization.Table(document.getElementById('table_div96'));table.draw(data, {showRowNumber: false});}</script></head><body><div id='table_div96'></div><br></body><p class="footer">Copyright 2014 The MathWorks, Inc.<br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% MATLAB Publish Utilities
 % This file when published in MATLAB will illustrate new dynamic elements
 % for HTML. Please note this only applies for HTML publishing.
+% Copyright 2014 The MathWorks, Inc.
+% Gareth Thomas
 %%
 
 myyear = {'2011';'2012';'2013';'2014'};
-values = [12;122;1231;1213.1];
+values = [12;122.44;1231;1213];
 morevalues= [true;false;true;false];
 mytable = table(myyear,values,morevalues);
 

@@ -26,7 +26,7 @@ for i=1:size(mytable,1)
     for j=1:size(mytable,2)
         if (isnumeric(mytable.(j)(i)))
             %s{end+1} = sprintf('{v: %d},',(mytable.(j)(i)));
-            s{end+1} = sprintf('{v: %.0f, f: ''%.0f ''},',(mytable.(j)(i)),(mytable.(j)(i)));
+            s{end+1} = sprintf('{v: %.2f, f: ''%.2f ''},',(mytable.(j)(i)),(mytable.(j)(i)));
         else
             if (islogical(mytable.(j)(i)))
                 if(mytable.(j)(i))
