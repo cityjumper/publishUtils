@@ -3,7 +3,7 @@
 % for HTML. Please note this only applies for HTML publishing.
 % Copyright 2014 The MathWorks, Inc.
 % Gareth Thomas
-%%
+%
 
 myyear = {'2011';'2012';'2013';'2014'};
 values = [12;122;1231;1213];
