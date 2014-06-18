@@ -14,3 +14,29 @@ disp(makeTableChart(mytable));
 mytable.Properties.VariableNames{1} = 'Year';
 mytable.Properties.VariableNames{2} = 'Values';
 mytable.Properties.VariableNames{3} = 'MoreValues';
+
+
+%% ColumnChart
+%
+mycountry = {'Portugal';'Germany';'Spain';'China'};
+values = [12;122;1231;1213];
+
+mytable1 = table(mycountry,values);
+
+myChartOptions.isStacked = 'false';
+disp(makeColumnChart(mytable1,myChartOptions));   
+%% GeoChart
+%
+myChartOptions.region = 'auto';
+myChartOptions.displaymode = 'regions';
+disp(makeGeoChart(mytable1,myChartOptions));   
+%% LineChart
+%
+myChartOptions.isStacked = 'false';
+disp(makeLineChart(mytable1,myChartOptions));  
+%% Map
+%
+disp(makeMap(mytable1));  
+%% PieChart
+%
+disp(makePieChart(mytable));

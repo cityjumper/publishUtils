@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code. Gareth Rules
 To make changes, update the MATLAB code and republish this document.
-      --><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>MATLAB Publish Utilities</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-04-19"><meta name="DC.source" content="test_utils.m"><style type="text/css">
+      --><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>test_utils</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-06-18"><meta name="DC.source" content="test_utils.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -65,8 +65,9 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>MATLAB Publish Utilities</h1><!--introduction--><p>This file when published in MATLAB will illustrate new dynamic elements for HTML. Please note this only applies for HTML publishing.</p><!--/introduction--><pre class="codeinput">myyear = {<span class="string">'2011'</span>;<span class="string">'2012'</span>;<span class="string">'2013'</span>;<span class="string">'2014'</span>};
-values = [12;122;1231;1213.1];
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">MATLAB Publish Utilities</a></li><li><a href="#3">ColumnChart</a></li><li><a href="#4">GeoChart</a></li><li><a href="#5">LineChart</a></li><li><a href="#6">Map</a></li><li><a href="#7">PieChart</a></li></ul></div><h2>MATLAB Publish Utilities<a name="1"></a></h2><p>This file when published in MATLAB will illustrate new dynamic elements for HTML. Please note this only applies for HTML publishing.</p><pre class="codeinput"><span class="comment">% Gareth Thomas</span>
+</pre><pre class="codeinput">myyear = {<span class="string">'2011'</span>;<span class="string">'2012'</span>;<span class="string">'2013'</span>;<span class="string">'2014'</span>};
+values = [12;122;1231;1213];
 morevalues= [true;false;true;false];
 mytable = table(myyear,values,morevalues);
 
@@ -74,15 +75,31 @@ disp(makeTableChart(mytable));
 mytable.Properties.VariableNames{1} = <span class="string">'Year'</span>;
 mytable.Properties.VariableNames{2} = <span class="string">'Values'</span>;
 mytable.Properties.VariableNames{3} = <span class="string">'MoreValues'</span>;
-</pre><head><script type='text/javascript' src='https://www.google.com/jsapi'></script><script type='text/javascript'>google.load('visualization', '1', {packages:['table']});google.setOnLoadCallback(drawTable);function drawTable() {var data = new google.visualization.DataTable();data.addColumn('string', 'myyear');data.addColumn('number', 'values');data.addColumn('boolean', 'morevalues');data.addRows([['2011',{v: 12, f: '12 '},true,],['2012',{v: 122, f: '122 '},false,],['2013',{v: 1231, f: '1231 '},true,],['2014',{v: 1213, f: '1213 '},false,],]);var table = new google.visualization.Table(document.getElementById('table_div14'));table.draw(data, {showRowNumber: false});}</script></head><body><div id='table_div14'></div><br></body><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+</pre><head><script type='text/javascript' src='https://www.google.com/jsapi'></script><script type='text/javascript'>google.load('visualization', '1', {packages:['table']});google.setOnLoadCallback(drawTable);function drawTable() {var data = new google.visualization.DataTable();data.addColumn('string', 'myyear');data.addColumn('number', 'values');data.addColumn('boolean', 'morevalues');data.addRows([['2011',{v: 12.000, f: '12.000 '},true,],['2012',{v: 122.000, f: '122.000 '},false,],['2013',{v: 1231.000, f: '1231.000 '},true,],['2014',{v: 1213.000, f: '1213.000 '},false,],]);var table = new google.visualization.Table(document.getElementById('table_div82'));table.draw(data, {showRowNumber: false});}</script></head><body><div id='table_div82'></div><br></body><h2>ColumnChart<a name="3"></a></h2><pre class="codeinput">mycountry = {<span class="string">'Portugal'</span>;<span class="string">'Germany'</span>;<span class="string">'Spain'</span>;<span class="string">'China'</span>};
+values = [12;122;1231;1213];
+
+mytable1 = table(mycountry,values);
+
+myChartOptions.isStacked = <span class="string">'false'</span>;
+disp(makeColumnChart(mytable1,myChartOptions));
+</pre><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["corechart"]});google.setOnLoadCallback(drawChart);function drawChart() {var data = new google.visualization.DataTable();data.addColumn('string', 'mycountry');data.addColumn('number', 'values');data.addRows([['Portugal',12,],['Germany',122,],['Spain',1231,],['China',1213,],]); var options = {hAxis: {textStyle: {fontName: 'Arial'}},isStacked: false};var chart = new google.visualization.ColumnChart(document.getElementById('chart_div694'));chart.draw(data, options);}</script></head><body><div id="chart_div694" style="width: 700px; height: 200px;"></div></body><h2>GeoChart<a name="4"></a></h2><pre class="codeinput">myChartOptions.region = <span class="string">'auto'</span>;
+myChartOptions.displaymode = <span class="string">'regions'</span>;
+disp(makeGeoChart(mytable1,myChartOptions));
+</pre><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><script type='text/javascript' src='https://www.google.com/jsapi'></script><script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});google.setOnLoadCallback(drawRegionsMap);function drawRegionsMap() {var data = google.visualization.arrayToDataTable([['Country', 'Value'],['Portugal', 12],['Germany', 122],['Spain', 1231],['China', 1213],]);var options = { region:'auto',colorAxis: {colors: ['white', 'blue']},displayMode: 'regions'};var chart = new google.visualization.GeoChart(document.getElementById('chart_div317'));chart.draw(data, options);};</script></head><body><div id="chart_div317" style="width: 900px; height: 500px;"></div></body><h2>LineChart<a name="5"></a></h2><pre class="codeinput">myChartOptions.isStacked = <span class="string">'false'</span>;
+disp(makeLineChart(mytable1,myChartOptions));
+</pre><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["corechart"]});google.setOnLoadCallback(drawChart);function drawChart() {var data = new google.visualization.DataTable();data.addColumn('string', 'mycountry');data.addColumn('number', 'values');data.addRows([['Portugal',12,],['Germany',122,],['Spain',1231,],['China',1213,],]); var options = {hAxis: {textStyle: {fontName: 'Arial'}},isStacked: false};var chart = new google.visualization.LineChart(document.getElementById('chart_div950'));chart.draw(data, options);}</script></head><body><div id="chart_div950" style="width: 700px; height: 200px;"></div></body><h2>Map<a name="6"></a></h2><pre class="codeinput">disp(makeMap(mytable1));
+</pre><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["map"]});google.setOnLoadCallback(drawMap);function drawMap() {var data = google.visualization.arrayToDataTable([['Location', 'Name'],['Portugal', 'Portugal'],['Germany', 'Germany'],['Spain', 'Spain'],['China', 'China'],]);var map = new google.visualization.Map(document.getElementById('map_div3'));map.draw(data, {showTip: true});}</script></head><body><div id="map_div3" style="width: 1200px; height: 400px"></div></body><h2>PieChart<a name="7"></a></h2><pre class="codeinput">disp(makePieChart(mytable));
+</pre><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["corechart"]});google.setOnLoadCallback(drawChart);function drawChart() {var data = google.visualization.arrayToDataTable([['Year', 'Values'],['2011',12],['2012',122],['2013',1231],['2014',1213],]);var options = {};var chart = new google.visualization.PieChart(document.getElementById('piechart43'));chart.draw(data, options);}</script></head><body><div id="piechart43" style="width: 900px; height: 500px;"></div></body><p class="footer">Copyright 2014 The MathWorks, Inc.<br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% MATLAB Publish Utilities
 % This file when published in MATLAB will illustrate new dynamic elements
 % for HTML. Please note this only applies for HTML publishing.
+% Copyright 2014 The MathWorks, Inc.
+% Gareth Thomas
 %%
 
 myyear = {'2011';'2012';'2013';'2014'};
-values = [12;122;1231;1213.1];
+values = [12;122;1231;1213];
 morevalues= [true;false;true;false];
 mytable = table(myyear,values,morevalues);
 
@@ -90,5 +107,31 @@ disp(makeTableChart(mytable));
 mytable.Properties.VariableNames{1} = 'Year';
 mytable.Properties.VariableNames{2} = 'Values';
 mytable.Properties.VariableNames{3} = 'MoreValues';
+
+
+%% ColumnChart
+%
+mycountry = {'Portugal';'Germany';'Spain';'China'};
+values = [12;122;1231;1213];
+
+mytable1 = table(mycountry,values);
+
+myChartOptions.isStacked = 'false';
+disp(makeColumnChart(mytable1,myChartOptions));   
+%% GeoChart
+%
+myChartOptions.region = 'auto';
+myChartOptions.displaymode = 'regions';
+disp(makeGeoChart(mytable1,myChartOptions));   
+%% LineChart
+%
+myChartOptions.isStacked = 'false';
+disp(makeLineChart(mytable1,myChartOptions));  
+%% Map
+%
+disp(makeMap(mytable1));  
+%% PieChart
+%
+disp(makePieChart(mytable));
 ##### SOURCE END #####
 --></body></html>

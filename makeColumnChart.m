@@ -1,10 +1,12 @@
-function out = makeTableChart(mytable)
-% Receives mytable which is of the table format
-% Copyright 2014 The MathWorks, Inc.
-% Gareth Thomas
-aux_rand = floor(rand(1)*100);
+function out = makeColumnChart(mytable,myChartOptions)
+
+% Generate Random name
+aux_rand = floor(rand(1)*1000);
 s = {};
-s{end+1} = sprintf('<html><head><script type=''text/javascript'' src=''https://www.google.com/jsapi''></script><script type=''text/javascript''>google.load(''visualization'', ''1'', {packages:[''table'']});google.setOnLoadCallback(drawTable);function drawTable() ');
+s{end+1} = sprintf('<html><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["corechart"]});google.setOnLoadCallback(drawChart);function drawChart() ');
+
+%s{end+1} = sprintf('{var data = google.visualization.arrayToDataTable([[');
+
 s{end+1} = sprintf('{var data = new google.visualization.DataTable();');
 % Add Column names
 for i = 1:length(mytable.Properties.VariableNames)
@@ -26,7 +28,7 @@ for i=1:size(mytable,1)
     for j=1:size(mytable,2)
         if (isnumeric(mytable.(j)(i)))
             %s{end+1} = sprintf('{v: %d},',(mytable.(j)(i)));
-            s{end+1} = sprintf('{v: %.3f, f: ''%.3f ''},',(mytable.(j)(i)),(mytable.(j)(i)));
+            s{end+1} = sprintf('%.0f,',(mytable.(j)(i)));
         else
             if (islogical(mytable.(j)(i)))
                 if(mytable.(j)(i))
@@ -42,8 +44,9 @@ for i=1:size(mytable,1)
     end
     s{end+1} = sprintf('],');
 end
-% Finish writting
-s{end+1} = sprintf(']);var table = new google.visualization.Table(document.getElementById(''table_div%d''));table.draw(data, {showRowNumber: false});}</script></head><body><div id=''table_div%d''></div><br></body></html>',aux_rand,aux_rand);
+
+s{end+1} = sprintf(']); var options = {hAxis: {textStyle: {fontName: ''Arial''}},isStacked: %s};var chart = new google.visualization.ColumnChart(document.getElementById(''chart_div%d''));chart.draw(data, options);}</script></head><body><div id="chart_div%d" style="width: 700px; height: 200px;"></div></body></html>',myChartOptions.isStacked,aux_rand,aux_rand);
+
 out = '';
 for i=1:length(s)
     out = sprintf('%s%s',out,s{i});
