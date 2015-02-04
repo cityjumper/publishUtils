@@ -40,3 +40,8 @@ disp(makeMap(mytable1));
 %% PieChart
 %
 disp(makePieChart(mytable));
+
+%% Annotation Chart
+%
+mytable2 = table((datetime:-1:datetime-10)',(1:10)',repmat('lol',10,1),repmat('wow',10,1),(1:10)'+3,repmat('l1121ol',10,1),repmat('w21ow',10,1));
+disp(makeAnnotationChart(mytable2));
