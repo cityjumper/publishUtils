@@ -1,0 +1,163 @@
+<deployment-project plugin="plugin.toolbox" plugin-version="1.0">
+  <configuration build-checksum="4146860424" file="/Users/Gareth/Documents/MATLAB/publishUtils/Publish Utils Toolbox.prj" location="/Users/Gareth/Documents/MATLAB/publishUtils" name="Publish Utils Toolbox" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>Publish Utils Toolbox</param.appname>
+    <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
+    <param.email>gareth.thomas@mathwworks.com</param.email>
+    <param.company>MathWorks</param.company>
+    <param.summary>Using Google Charts API for additional publishing features.</param.summary>
+    <param.description>Given Tables in MATLAB, this toolbox has a few extra capabilities when publishing HTML from MATLAB scripts/functions.</param.description>
+    <param.screenshot>/Users/Gareth/Desktop/google-developers-logo-vector.jpg</param.screenshot>
+    <param.version>2.0</param.version>
+    <param.output>${PROJECT_ROOT}/Publish Utils Toolbox.mltbx</param.output>
+    <param.products.name>
+      <item>Financial Toolbox</item>
+      <item>MATLAB</item>
+    </param.products.name>
+    <param.products.id>
+      <item>30</item>
+      <item>1</item>
+    </param.products.id>
+    <param.products.version>
+      <item>5.5</item>
+      <item>8.5</item>
+    </param.products.version>
+    <param.platforms />
+    <param.guid>dc7e3abe-6e0e-4cf5-8bea-8b44d87bd08c</param.guid>
+    <param.exclude.filters />
+    <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;examples&gt;
+   &lt;exampleCategory name="help"&gt;
+      &lt;example name="functionlist" type="html"&gt;
+         &lt;file type="source"&gt;/help/html/functionlist.html&lt;/file&gt;
+         &lt;file type="main"&gt;/help/functionlist.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="myreleasenotes" type="html"&gt;
+         &lt;file type="source"&gt;/help/html/myreleasenotes.html&lt;/file&gt;
+         &lt;file type="main"&gt;/help/myreleasenotes.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+   &lt;/exampleCategory&gt;
+   &lt;exampleCategory name="Example"&gt;
+      &lt;example name="ExampleAnnotationChart" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/ExampleAnnotationChart.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/ExampleAnnotationChart.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="ExampleColumnChart" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/ExampleColumnChart.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/ExampleColumnChart.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="ExampleGeoChart" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/ExampleGeoChart.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/ExampleGeoChart.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="ExampleLineChart" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/ExampleLineChart.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/ExampleLineChart.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="ExampleMapChart" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/ExampleMapChart.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/ExampleMapChart.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="ExamplePieChart" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/ExamplePieChart.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/ExamplePieChart.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="ExampleTableChart" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/ExampleTableChart.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/ExampleTableChart.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="test_utils" type="html"&gt;
+         &lt;file type="source"&gt;/Example/html/test_utils.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Example/test_utils.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+   &lt;/exampleCategory&gt;
+&lt;/examples&gt;</param.examples>
+    <param.demosxml />
+    <param.apps />
+    <param.docs>${PROJECT_ROOT}/Source/info.xml</param.docs>
+    <unset>
+      <param.output />
+      <param.platforms />
+      <param.exclude.filters />
+      <param.demosxml />
+      <param.apps />
+    </unset>
+    <fileset.rootdir>
+      <file>${PROJECT_ROOT}/Source</file>
+    </fileset.rootdir>
+    <fileset.rootfiles>
+      <file>${PROJECT_ROOT}/Source/Example</file>
+      <file>${PROJECT_ROOT}/Source/demos.xml</file>
+      <file>${PROJECT_ROOT}/Source/gt_mxdom2simplehtml.xml</file>
+      <file>${PROJECT_ROOT}/Source/help</file>
+      <file>${PROJECT_ROOT}/Source/info.xml</file>
+      <file>${PROJECT_ROOT}/Source/makeAnnotationChart.m</file>
+      <file>${PROJECT_ROOT}/Source/makeColumnChart.m</file>
+      <file>${PROJECT_ROOT}/Source/makeGeoChart.m</file>
+      <file>${PROJECT_ROOT}/Source/makeLineChart.m</file>
+      <file>${PROJECT_ROOT}/Source/makeMap.m</file>
+      <file>${PROJECT_ROOT}/Source/makePieChart.m</file>
+      <file>${PROJECT_ROOT}/Source/makeTableChart.m</file>
+    </fileset.rootfiles>
+    <fileset.depfun.included />
+    <fileset.depfun.excluded />
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/Gareth/Documents/MATLAB/publishUtils" name="Publish Utils Toolbox.mltbx" optional="false">/Users/Gareth/Documents/MATLAB/publishUtils/Publish Utils Toolbox.mltbx</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2015a.app</root>
+      <toolboxes>
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.10.2</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
