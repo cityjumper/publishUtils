@@ -66,12 +66,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Functions</h1><!--introduction--><p>This is a list of the functions that the Toolbox contains. Please note that these functions are simple wrapper around the Google Chart API. <a href="https://developers.google.com/chart/">Google Charts API</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">makeTableChart</a></li><li><a href="#2">makePieChart</a></li></ul></div><h2>makeTableChart<a name="1"></a></h2><p>Input: table data type from MATLAB</p><h2>makePieChart<a name="2"></a></h2><p>Input: table data type from MATLAB. This table should have first column names, and the second numbers</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Functions</h1><!--introduction--><p>This is a list of the functions that the Toolbox contains. Please note that these functions are simple wrapper around the Google Chart API. <a href="https://developers.google.com/chart/">Google Charts API</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#2">makeTableChart</a></li><li><a href="#3">makePieChart</a></li><li><a href="#4">makeGeoChart</a></li><li><a href="#5">makeMap</a></li><li><a href="#6">makeLineChart</a></li><li><a href="#7">makeColumnChart</a></li><li><a href="#8">makeAnnotationChart</a></li></ul></div><pre class="codeinput"><span class="comment">% to use all of these one needs to type: disp(make*(inputs));</span>
+</pre><h2>makeTableChart<a name="2"></a></h2><p>Input: table data type from MATLAB</p><h2>makePieChart<a name="3"></a></h2><p>Input: table data type from MATLAB. This table should have first column names, and the second numbers</p><h2>makeGeoChart<a name="4"></a></h2><p>Input: table data type from MATLAB. The second input has to do with the Geo Chart Options. It is a structure which has myChartOptions.region,myChartOptions.displaymode</p><h2>makeMap<a name="5"></a></h2><p>Input: table data type from MATLAB. This table should have first column names of countries/places, and the second numbers</p><h2>makeLineChart<a name="6"></a></h2><p>Input: table data type from MATLAB. The second input has a strucuture like: myChartOptions.isStacked, to enable the stacked chart or not.</p><h2>makeColumnChart<a name="7"></a></h2><p>Input: table data type from MATLAB. The second input has a strucuture like: myChartOptions.isStacked, to enable the stacked chart or not.</p><h2>makeAnnotationChart<a name="8"></a></h2><p>Input: table data type from MATLAB.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Functions
 % This is a list of the functions that the Toolbox contains. Please note
 % that these functions are simple wrapper around the Google Chart API. <https://developers.google.com/chart/ Google Charts API>
 %%
+
+% to use all of these one needs to type: disp(make*(inputs));
+
 
 %% makeTableChart
 % Input: table data type from MATLAB
@@ -81,6 +85,24 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % Input: table data type from MATLAB. This table should have first column
 % names, and the second numbers
 
+%% makeGeoChart
+% Input: table data type from MATLAB. The second input has to do with the
+% Geo Chart Options. It is a structure which has myChartOptions.region,myChartOptions.displaymode
+
+%% makeMap
+% Input: table data type from MATLAB. This table should have first column
+% names of countries/places, and the second numbers
+
+%% makeLineChart
+% Input: table data type from MATLAB. The second input has a strucuture
+% like: myChartOptions.isStacked, to enable the stacked chart or not.
+
+%% makeColumnChart
+% Input: table data type from MATLAB. The second input has a strucuture
+% like: myChartOptions.isStacked, to enable the stacked chart or not.
+
+%% makeAnnotationChart
+% Input: table data type from MATLAB.
 
 ##### SOURCE END #####
 --></body></html>

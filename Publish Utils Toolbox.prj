@@ -1,12 +1,12 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="4146860424" file="/Users/Gareth/Documents/MATLAB/publishUtils/Publish Utils Toolbox.prj" location="/Users/Gareth/Documents/MATLAB/publishUtils" name="Publish Utils Toolbox" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="3393876561" file="/Users/Gareth/Documents/MATLAB/publishUtils/Publish Utils Toolbox.prj" location="/Users/Gareth/Documents/MATLAB/publishUtils" name="Publish Utils Toolbox" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>Publish Utils Toolbox</param.appname>
     <param.authnamewatermark>Gareth Thomas</param.authnamewatermark>
     <param.email>gareth.thomas@mathwworks.com</param.email>
     <param.company>MathWorks</param.company>
     <param.summary>Using Google Charts API for additional publishing features.</param.summary>
     <param.description>Given Tables in MATLAB, this toolbox has a few extra capabilities when publishing HTML from MATLAB scripts/functions.</param.description>
-    <param.screenshot>/Users/Gareth/Desktop/google-developers-logo-vector.jpg</param.screenshot>
+    <param.screenshot>${PROJECT_ROOT}/Source/google-developers-logo-vector.jpg</param.screenshot>
     <param.version>2.0</param.version>
     <param.output>${PROJECT_ROOT}/Publish Utils Toolbox.mltbx</param.output>
     <param.products.name>
@@ -97,6 +97,7 @@
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}/Source/Example</file>
       <file>${PROJECT_ROOT}/Source/demos.xml</file>
+      <file>${PROJECT_ROOT}/Source/google-developers-logo-vector.jpg</file>
       <file>${PROJECT_ROOT}/Source/gt_mxdom2simplehtml.xml</file>
       <file>${PROJECT_ROOT}/Source/help</file>
       <file>${PROJECT_ROOT}/Source/info.xml</file>
