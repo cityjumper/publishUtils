@@ -3,7 +3,7 @@ function out = makeGeoChart(mygeotable,myChartOptions)
 % map;
 
 % Generate Random name
-aux_rand = floor(rand(1)*1000);
+aux_rand = floor(rand(1)*10000);
 
 s = {};
 s{end+1} = sprintf('<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><script type=''text/javascript'' src=''https://www.google.com/jsapi''></script><script type=''text/javascript''>google.load(''visualization'', ''1'', {''packages'': [''geochart'']});google.setOnLoadCallback(drawRegionsMap);function drawRegionsMap() ');

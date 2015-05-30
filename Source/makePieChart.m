@@ -2,7 +2,7 @@ function out = makePitChart(mytable)
 % Given a mytable of 2x2 this will plot a pie chart
 % The mytable has to have the format of column1 string, column 2 numbers
 
-aux_rand = floor(rand(1)*100);
+aux_rand = floor(rand(1)*10000);
 
 s = {};
 s{end+1} = sprintf('<html><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["corechart"]});google.setOnLoadCallback(drawChart);function drawChart() {var data = google.visualization.arrayToDataTable([');

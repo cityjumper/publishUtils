@@ -2,7 +2,7 @@ function out = makeAnnotationChart(mytable)
 % data must look like:
 % date|number|string title|string text|number|string title|string text....
 % Generate Random name
-aux_rand = floor(rand(1)*1000);
+aux_rand = floor(rand(1)*10000);
 s = {};
 s{end+1} = sprintf('<html><head><script type="text/javascript" src="https://www.google.com/jsapi?autoload={''modules'':[{''name'':''visualization'',''version'':''1'',''packages'':[''annotationchart'']}]}"></script><script type=''text/javascript''>google.load(''visualization'', ''1'', {''packages'':[''annotationchart'']});google.setOnLoadCallback(drawChart);function drawChart() {var data = new google.visualization.DataTable();');
 

@@ -1,7 +1,7 @@
 function out =makeMap(mytable)
 % the input mytable should be a 2x2 only with strings. The first will show
 % the location and the second the string to attach.
-aux_rand = floor(rand(1)*100);
+aux_rand = floor(rand(1)*10000);
 s = {};
 s{end+1} = sprintf('<html><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["map"]});google.setOnLoadCallback(drawMap);function drawMap() {var data = google.visualization.arrayToDataTable([[''Location'', ''Name''],');
 

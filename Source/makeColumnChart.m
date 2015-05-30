@@ -1,7 +1,7 @@
 function out = makeColumnChart(mytable,myChartOptions)
 
 % Generate Random name
-aux_rand = floor(rand(1)*1000);
+aux_rand = floor(rand(1)*10000);
 s = {};
 s{end+1} = sprintf('<html><head><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("visualization", "1", {packages:["corechart"]});google.setOnLoadCallback(drawChart);function drawChart() ');
 
